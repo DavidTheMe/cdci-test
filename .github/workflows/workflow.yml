@@ -1,17 +1,17 @@
-name: Super-Linter
+name: CI
 
-on: push
+on:
+  push:
+    branches: [ "main" ]
 
 jobs:
-  super-lint:
-    name: Lint code base
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Run Super-Linter
-        uses: github/super-linter@v3
-    env:
-        DEFAULT_BRANCH: main
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: npm install
+      - run: npm test
