@@ -1,0 +1,15 @@
+name: My workflow
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    steps:
+          - name: Write a log
+          run: |
+            echo "HELLO CI!"
