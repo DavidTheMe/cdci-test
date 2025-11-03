@@ -10,6 +10,6 @@ jobs:
   builds:
     runs-on: ubuntu-latest
     steps:
-          - name: Write a log
-            run: |
-            echo "HELLO CI!"
+      - name: Write a log
+        run: |
+        echo "HELLO CI!"
