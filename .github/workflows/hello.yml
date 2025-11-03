@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
           - name: Write a log
-          run: |
+            run: |
             echo "HELLO CI!"
