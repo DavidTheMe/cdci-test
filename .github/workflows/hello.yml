@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Write a log
         run: |
-        echo "HELLO CI!"
+          echo "HELLO CI!"
